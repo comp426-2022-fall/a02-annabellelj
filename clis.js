@@ -25,15 +25,14 @@ if(args.h){
 
 const timezone = moment.tz.guest();
 
-var latitude = args.n || args.s * -1;
+const latitude = args.n || (args.s * -1);
 
-var longitude = args.e || args.w * -1;
+const longitude = args.e || (args.w * -1);
 
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude +'&hourly=temperature_2m&daily=precipitation_hours&current_weather=true&timezone=' + timezone);
 
 if(args.j){
     console.log(data);
-    process.exit(0);
 }
 
 const data = await response.json();
