@@ -29,14 +29,6 @@ var latitude = args.n || args.s * -1;
 
 var longitude = args.e || args.w * -1;
 
-if(!args.n || !args.s){
-    console.log('Latitude must be in range');
-}
-
-if(!args.e|| !args.w){
-    console.log('Longitude must be in range');
-}
-
 const response = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + latitude + '&longitude=' + longitude +'&hourly=temperature_2m&daily=precipitation_hours&current_weather=true&timezone=' + timezone);
 
 if(args.j){
