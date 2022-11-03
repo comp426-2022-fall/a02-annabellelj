@@ -23,7 +23,7 @@ if(args.h){
     }
 }
 
-const timezone = moment.tz.guest();
+const timezone = moment.tz.guess();
 
 const latitude = args.n || (args.s * -1);
 
