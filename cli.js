@@ -35,6 +35,7 @@ const data = await response.json();
 
 if(args.j){
     console.log(data);
+    process.exit(0);
 }
 
 const days = args.d 
